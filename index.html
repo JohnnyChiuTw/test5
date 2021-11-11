@@ -18,15 +18,15 @@
 			this.vid.currentTime = 0;
 		}.bind(this));
 		    
-// 		var button = document.querySelector("#mutebutton");    
-// 		button.addEventListener("click", function(evt){
-// 		if(Video_0.muted==true){
-// 			button.innerHTML="Mute";
-// 			Video_0.muted=false;
-// 		}else{
-// 			button.innerHTML="Unmute";
-// 			Video_0.muted=true;
-// 		}
+		var button = document.querySelector("#mutebutton");    
+		button.addEventListener("click", function(evt){
+		if(vid.muted==true){
+			button.innerHTML="Mute";
+			vid.muted=false;
+		}else{
+			button.innerHTML="Unmute";
+			vid.muted=true;
+		}
             }
         });
 	    
@@ -63,19 +63,15 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <div class="arjs-loader">
-        <div>讀取中, 請稍候....4</div>
+        <div>讀取中, 請稍候....5</div>
     </div>
 	<!-- muted button HTML -->
 	<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
-<!-- <div style='position: absolute; bottom: 10px; right: 30px; width:100%; text-align: center; z-index: 1;'>
+<div style='position: absolute; bottom: 10px; right: 30px; width:100%; text-align: center; z-index: 1;'>
       <button id="mutebutton" style='position: absolute; bottom: 10px'>
           Unmute
       </button>
-  </div> -->
-<!-- <div style='position: absolute; bottom: 5px; left: 30px; width:100%; text-align: right; z-index: 1;'>
-        <input type="image" id="fullscreen" src="../fullscreen.png" style='position: absolute; bottom: 0px; right: 35px;'>
-        </input>
-    </div> -->
+  </div>
 	
     <a-scene
         vr-mode-ui="enabled: false;"
@@ -85,7 +81,7 @@
         <a-assets>
             <video src="https://johnnychiutw.github.io/test5/videos/4.mp4"
                 preload="auto" id="vid" response-type="arraybuffer" loop
-                crossorigin webkit-playsinline autoplay unmuted playsinline>
+                crossorigin webkit-playsinline autoplay muted playsinline>
             </video>
         </a-assets>
 
