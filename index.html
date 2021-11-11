@@ -33,8 +33,24 @@
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
+    <a-assets>
+      <video
+             src="https://github.com/JohnnyChiuTw/test5/videos/4.mp4"
+             preload="auto"
+             id="vid"
+             response-type="arraybuffer"
+             loop
+             crossorigin
+             webkit-playsinline
+             autoplay
+             meted
+             playsinline
+             ><video>
+        </a-assets>
+    
     <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
     <a-nft
+           videohandler
       type="nft"
       url="https://github.com/JohnnyChiuTw/test5/picture4"
       smooth="true"
@@ -42,12 +58,8 @@
       smoothTolerance=".01"
       smoothThreshold="5"
     >
-      <a-entity
-        gltf-model="https://github.com/JohnnyChiuTw/test5/videos/4.mp4"
-        scale="5 5 5"
-        position="50 150 0"
-      >
-      </a-entity>
+   <a-video src ="#vid" position="50 150 -100" width="300" height="200">
+     <a-video>
     </a-nft>
     <a-entity camera></a-entity>
   </a-scene>
