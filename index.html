@@ -24,23 +24,20 @@
 	    
 	AFRAME.registerComponent('button', {
 		init: function () {	    
-	var button = document.querySelector("#mutebutton");    
-	button.addEventListener("click", function(evt){
-		if(vid.muted==true){
-			button.innerHTML="Mute";
-			vid.muted=false;
-		}else{
-			button.innerHTML="Unmute";
-			vid.muted=true;
+			var button = document.querySelector("#mutebutton");    
+			button.addEventListener("click", function(evt){
+			
+				if(vid.muted==true){
+					button.innerHTML="Mute";
+					vid.muted=false;
+				}else{
+					button.innerHTML="Unmute";
+					vid.muted=true;
+				}
+			}
 		}
-	}
 	});
     };
-	
-	
-	
-	
-	
 	
 </script>
 
@@ -67,7 +64,7 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <div class="arjs-loader">
-        <div>讀取中, 請稍候....6</div>
+        <div>讀取中, 請稍候....7</div>
     </div>
 	<!-- muted button HTML -->
 	<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
