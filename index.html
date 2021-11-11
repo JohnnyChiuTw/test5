@@ -17,22 +17,19 @@
 			this.vid.pause();
 			this.vid.currentTime = 0;
 		}.bind(this));
+		    
+		var button = document.querySelector("#mutebutton");    
+		button.addEventListener("click", function(evt){
+		if(Video_0.muted==true){
+			button.innerHTML="Mute";
+			Video_0.muted=false;
+		}else{
+			button.innerHTML="Unmute";
+			Video_0.muted=true;
+		}
             }
         });
 	    
-// 	AFRAME.registerComponent('button', {
-// 		init: function () {
-
-// 		var button = document.querySelector("#mutebutton");
-// 		button.addEventListener("click", function(evt){
-// 		if(Video_0.muted==true){
-// 			button.innerHTML="Mute";
-// 			Video_0.muted=false;
-// 		}else{
-// 			button.innerHTML="Unmute";
-// 			Video_0.muted=true;
-// 		}
-// 	});
 	
     };
 	
@@ -66,15 +63,15 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <div class="arjs-loader">
-        <div>讀取中, 請稍候....</div>
+        <div>讀取中, 請稍候....0</div>
     </div>
 	<!-- muted button HTML -->
 	<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
-<!-- <div style='position: absolute; bottom: 10px; right: 30px; width:100%; text-align: center; z-index: 1;'>
+<div style='position: absolute; bottom: 10px; right: 30px; width:100%; text-align: center; z-index: 1;'>
       <button id="mutebutton" style='position: absolute; bottom: 10px'>
           Unmute
       </button>
-  </div> -->
+  </div>
 <!-- <div style='position: absolute; bottom: 5px; left: 30px; width:100%; text-align: right; z-index: 1;'>
         <input type="image" id="fullscreen" src="../fullscreen.png" style='position: absolute; bottom: 0px; right: 35px;'>
         </input>
