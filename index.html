@@ -46,7 +46,7 @@
 <body style="margin : 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
-    <div>讀取中, 請稍候4...</div>
+    <div>讀取中, 請稍候5...</div>
   </div>
   <a-scene
     vr-mode-ui="enabled: false;"
@@ -58,7 +58,7 @@
              src="https://johnnychiutw.github.io/test5/videos/4.mp4"
              preload="auto"
              id="vid" response-type="arraybuffer" loop
-                crossorigin webkit-playsinline autoplay muted playsinline>
+                crossorigin webkit-playsinline autoplay unmute playsinline>
       </video>
     </a-assets>
     
@@ -72,7 +72,7 @@
       smoothTolerance=".01"
       smoothThreshold="5"
     >
-   <a-video src ="#vid" position="50 150 -100" width="300" height="200">
+   <a-video src ="#vid" position="150 150 -100" rotation="-90,0,0" width="300" height="200">
      <a-video>
     </a-nft>
     <a-entity camera></a-entity>
