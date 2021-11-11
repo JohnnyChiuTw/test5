@@ -18,8 +18,14 @@
 			this.vid.currentTime = 0;
 		}.bind(this));
 		    
-		var button = document.querySelector("#mutebutton");    
-		button.addEventListener("click", function(evt){
+	
+            }
+        });
+	    
+	AFRAME.registerComponent('button', {
+		init: function () {	    
+	var button = document.querySelector("#mutebutton");    
+	button.addEventListener("click", function(evt){
 		if(vid.muted==true){
 			button.innerHTML="Mute";
 			vid.muted=false;
@@ -27,10 +33,8 @@
 			button.innerHTML="Unmute";
 			vid.muted=true;
 		}
-            }
-        });
-	    
-	
+	}
+	});
     };
 	
 	
@@ -63,7 +67,7 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <div class="arjs-loader">
-        <div>讀取中, 請稍候....5</div>
+        <div>讀取中, 請稍候....6</div>
     </div>
 	<!-- muted button HTML -->
 	<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
