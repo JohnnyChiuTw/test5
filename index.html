@@ -13,12 +13,11 @@
 
                 marker.addEventListener('markerFound', function () {
                     this.vid.play();
-			
                 }.bind(this));
 
 		marker.addEventListener('markerLost', function() {
 			this.vid.pause();
-			
+		
 			this.vid.currentTime = 0;
 		}.bind(this));
 		    
@@ -71,7 +70,7 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <div class="arjs-loader">
-        <div>讀取中, 請稍候....16</div>
+        <div>讀取中, 請稍候....17</div>
     </div>
 	<!-- muted button HTML -->
 <!-- <body style='margin : 0px; overflow: hidden; font-family: Monospace;'> -->
