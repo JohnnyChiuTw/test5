@@ -13,12 +13,12 @@
 
                 marker.addEventListener('markerFound', function () {
                     this.vid.play();
-			this.vid.muted=false;
+			
                 }.bind(this));
 
 		marker.addEventListener('markerLost', function() {
 			this.vid.pause();
-			this.vid.muted=true;
+			
 			this.vid.currentTime = 0;
 		}.bind(this));
 		    
@@ -71,7 +71,7 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <div class="arjs-loader">
-        <div>讀取中, 請稍候....15</div>
+        <div>讀取中, 請稍候....16</div>
     </div>
 	<!-- muted button HTML -->
 <!-- <body style='margin : 0px; overflow: hidden; font-family: Monospace;'> -->
@@ -94,7 +94,7 @@
         <a-assets>
             <video src="https://johnnychiutw.github.io/test5/videos/4.mp4"
                 preload="auto" id="vid" response-type="arraybuffer" loop
-                crossorigin webkit-playsinline autoplay muted playsinline>
+                crossorigin webkit-playsinline autoplay unmute playsinline>
             </video>
         </a-assets>
 
