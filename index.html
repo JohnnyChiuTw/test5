@@ -39,6 +39,19 @@
 					this.vid.muted=true;
 				}
 			}
+						
+			var marker = this.el;
+
+	                this.vid = document.querySelector("#vid");
+
+        	        marker.addEventListener('markerFound', function () {
+                	    this.vid.play();
+	                }
+
+			marker.addEventListener('markerLost', function() {
+				this.vid.pause();
+				this.vid.currentTime = 0;
+			}
 		}
 	});
 	
@@ -68,7 +81,7 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <div class="arjs-loader">
-        <div>讀取中, 請稍候....13</div>
+        <div>讀取中, 請稍候....14</div>
     </div>
 	<!-- muted button HTML -->
 <!-- <body style='margin : 0px; overflow: hidden; font-family: Monospace;'> -->
